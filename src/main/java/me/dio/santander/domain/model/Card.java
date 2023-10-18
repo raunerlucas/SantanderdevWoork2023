@@ -3,15 +3,16 @@ package me.dio.santander.domain.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+
 @Entity(name = "tb_card")
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true,length = 16)
+    @Column(unique = true, length = 16)
     private String number;
 
-    @Column(name = "card_limit",scale = 13, precision = 2)
+    @Column(name = "card_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
