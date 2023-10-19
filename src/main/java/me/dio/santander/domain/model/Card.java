@@ -9,7 +9,7 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, length = 16)
+    @Column(unique = true, length = 19)
     private String number;
 
     @Column(name = "card_limit", precision = 13, scale = 2)
